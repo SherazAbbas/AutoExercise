@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "cypress": "^13.7.1",
+    "cypress": "^13.7.2",
     "neat-csv": "^5.2.0"
   },
   "name": "autoexercise",
