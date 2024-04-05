@@ -31,6 +31,7 @@ export default class authElement{
         accountCreated_title: () => cy.get('.title'),
         continueBtn: () => cy.get('[data-qa="continue-button"]'),
         login_error_msg: () => cy.get('.login-form p'),
+        signup_error_msg: () => cy.get('.signup-form p')
 
     }
 }

@@ -2,8 +2,14 @@ import homeElement from "../PageElements/homeElements";
 
 const home = new homeElement()
 export default class homeMethods{
+
+    navbar = ".col-sm-8>.shop-menu>.nav li";
+
+
+
     verifyHomeTab(){
-        home.element.navbar()
+        //home.element.navbar()
+        cy.get(this.navbar)
         .should('be.visible')
         .contains('Home')
         .should('have.attr','style')
@@ -20,4 +26,16 @@ export default class homeMethods{
         .should('be.visible')
         .and('contain', name)
     }
+
+    clickLogout(){
+        cy.get(this.navbar)
+        .should('be.visible')
+        .contains('Logout')
+        .click()
+    }
+    verifyAuthenticationPage(){
+        cy.url()
+        .should('include', '/login')
+    }
+
 }

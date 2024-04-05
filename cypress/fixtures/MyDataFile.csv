@@ -1,3 +1,4 @@
-UserEmail,Password,UserName,Day,Month,Year,FirstName,LastName,Company
-smith8c@gmail.com,webdir123RR,Smith,23,2,2010,,,
-bob8c@gmail.com,webdir123RR,Bob,,,,,,
+UserEmail,Password,UserName,Day,Month,Year,FirstName,LastName,Company,Address,Country,State,City,ZipCode,MobileNumber
+smith8c@gmail.com,webdir123RR,Smith,23,2,2011,Cal,Smith,RSY,36A Main St,United States,New York,New York,10001,+145236598
+Bob8c@gmail.com,webdir123RR,Bob,,,,,,
+adob@gmail.com,asd123RR

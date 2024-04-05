@@ -10,11 +10,11 @@ export default class authentication{
         .should('be.visible')
         .and('have.text', 'New User Signup!')
     }          
-    enterNameEmail(){
+    enterNameEmail(name,email){
         auth.element.userName()
-        .type('Smith')
+        .type(name)
         auth.element.userEmail()
-        .type('smith8c@gmail.com')
+        .type(email)
     }
     clickSignupBtn(){
         auth.element.signupBtn()
@@ -26,43 +26,45 @@ export default class authentication{
             .should('be.visible')
             .and('contain', 'Enter Account Information')
     }
-    fillTheForm(){
+    fillTheForm(password,day,month,year,fname,lname,company,address,country,state,city,zipcode,mobileNumber){
         auth.element.genderTitle()
         .check('Mr')
         .should('be.checked')
         auth.element.userPass()
-            .type('webdir123RR')
+            .type(password)
 
-        auth.element.day().select('23')
-        auth.element.month().select('2')
-        auth.element.year().select('1990')
+        auth.element.day().select(day)
+        auth.element.month().select(month)
+        auth.element.year().select(year)
 
         auth.element.newsletter_checkbox().check()
         auth.element.offers_checkbox().check()
         auth.element.firstName()
-            .type('Steve')
+            .type(fname)
         auth.element.lastName()
-            .type('Smith')
-            .should('have.value', 'Smith')
+            .type(lname)
+            .should('have.value', lname)
             .and('be.visible')
         auth.element.company()
-            .type('RSY')
+            .type(company)
         auth.element.address1()
-            .type('36A Main St')
+            .type(address)
         auth.element.country()
-            .select('United States')
+            .select(country)
         auth.element.state()   
-            .type('New York')
+            .type(state)
         auth.element.city()
-            .type('New York')
+            .type(city)
         auth.element.zipcode()
-            .type('10001')
+            .type(zipcode)
         auth.element.mobileNumber()
-            .type('1234567890')
+            .type(mobileNumber)
+    }
+    clickCreateAccBtn(){
         auth.element.createAccountBtn()
-            .should('be.visible')
-            .and('contain', 'Create Account')
-            .click()
+        .should('be.visible')
+        .and('contain', 'Create Account')
+        .click()
     }
     verifyAccountCreated(){
         auth.element.accountCreated_page()
@@ -94,17 +96,17 @@ export default class authentication{
         .should('be.visible')
         .and('have.text', 'Login to your account')
     }
-    enterEmailPass(){
+    enterEmailPass(email,password){
         auth.element.loginEmail()
-        .type('Bob8c@gmail.com')
+        .type(email)
         auth.element.loginPassword()
-        .type('webdir123RR')
+        .type(password)
     }
-    enterIncorrectEmailPass(){
+    enterIncorrectEmailPass(email,password){
         auth.element.loginEmail()
-        .type('adob@gmail.com')
+        .type(email)
         auth.element.loginPassword()
-        .type('web123RR')
+        .type(password)
     }
     clickLoginBtn(){
         auth.element.loginBtn()
@@ -114,5 +116,11 @@ export default class authentication{
         auth.element.login_error_msg()
         .should('be.visible')
         .and('have.text', 'Your email or password is incorrect!')
+    }
+
+    verifyErrorMessage1(){
+        auth.element.signup_error_msg()
+        .should('be.visible')
+        .and('have.text', 'Email Address already exist!')
     }
 }
