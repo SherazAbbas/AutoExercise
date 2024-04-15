@@ -1,6 +1,6 @@
 ///<reference types="cypress"/>
-import homeMethods from "../PageObjects/PageMethods/homeMethods";
-import authentication from "../PageObjects/PageMethods/authenticationMethods";
+import homeMethods from "./PageMethods/homeMethods";
+import authentication from "./PageMethods/authenticationMethods";
 const csv = require('neat-csv')
 
 const home = new homeMethods();

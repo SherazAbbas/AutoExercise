@@ -1,6 +1,3 @@
-import homeElement from "../PageElements/homeElements";
-
-const home = new homeElement()
 export default class homeMethods{
 
     navbar = ".col-sm-8>.shop-menu>.nav li";
@@ -15,13 +12,13 @@ export default class homeMethods{
         .should('have.attr','style')
     }
     navigateToAuthentication(){
-        home.element.navbar()
+        cy.get(this.navbar)
         .should('be.visible')
         .contains('Signup')
         .click()
     }
     varifyUserName(name){
-        home.element.navbar()
+        cy.get(this.navbar)
         .contains(' Logged in as ')
         .should('be.visible')
         .and('contain', name)
