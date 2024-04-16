@@ -34,5 +34,23 @@ export default class homeMethods{
         cy.url()
         .should('include', '/login')
     }
+    clickContactUsTab(){
+        cy.get(this.navbar)
+        .should('be.visible')
+        .contains('Contact us')
+        .click()
+    }
+    clickTestCasesTab(){
+        cy.get(this.navbar)
+        .should('be.visible')
+        .contains('Test Cases')
+        .click()
+    }
+    clickProductTab(){
+        cy.get(this.navbar)
+        .should('be.visible')
+        .contains('Products')
+        .click()
+    }
 
 }
