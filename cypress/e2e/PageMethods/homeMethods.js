@@ -1,6 +1,10 @@
 export default class homeMethods{
 
     navbar = ".col-sm-8>.shop-menu>.nav li";
+    subscription_text = '.single-widget h2';
+    subscription_email_field = '#susbscribe_email';
+    arrowIcon = '#subscribe';
+    success_message = '.alert-success';
 
 
 
@@ -50,6 +54,30 @@ export default class homeMethods{
         cy.get(this.navbar)
         .should('be.visible')
         .contains('Products')
+        .click()
+    }
+    verifySubscriptionText(){
+        cy.get(this.subscription_text)
+        .should('be.visible')
+        .and('contain', 'Subscription')
+    }
+    enterSubscriptionEmail(email){
+        cy.get(this.subscription_email_field)
+        .should('be.visible')
+        .type(email)
+        cy.get(this.arrowIcon)
+        .should('be.visible')
+        .click()
+    }
+    verifySuccessMessage(message){
+        cy.get(this.success_message)
+        .should('be.visible')
+        .and('contain', message)
+    }
+    clickCartTab(){
+        cy.get(this.navbar)
+        .should('be.visible')
+        .contains('Cart')
         .click()
     }
 

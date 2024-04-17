@@ -46,7 +46,7 @@ describe('Page verification', () => {
 
     })
 
-    it.only('Verify product detail page', () => {
+    it('Verify product detail page', () => {
 
         cy.visit('/');
         home.verifyHomeTab();
@@ -59,12 +59,16 @@ describe('Page verification', () => {
 
     })
 
-    it.only('Search product', () => {
+    it('Search product', () => {
 
         cy.visit('/');
         home.verifyHomeTab();
         home.clickProductTab();
         products.verifyProductsPage();
+        products.clickSearchField();
+        products.enterSearchText(regData[0].SearchText);
+        products.clickSearchBtn();
+        products.verifySearchResults(regData[0].SearchText);
     })
 
 })

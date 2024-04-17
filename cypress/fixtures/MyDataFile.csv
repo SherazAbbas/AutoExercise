@@ -1,4 +1,4 @@
-UserEmail,Password,UserName,Day,Month,Year,FirstName,LastName,Company,Address,Country,State,City,ZipCode,MobileNumber,Subject,Message
-smith8c@gmail.com,webdir123RR,Smith,23,2,2011,Cal,Smith,RSY,36A Main St,United States,New York,New York,10001,145236598,design responsiveness,The design is user-friendly but it's not responsive for iPad.
+UserEmail,Password,UserName,Day,Month,Year,FirstName,LastName,Company,Address,Country,State,City,ZipCode,MobileNumber,Subject,Message,SearchText,SuccessMessage
+smith8c@gmail.com,webdir123RR,Smith,23,2,2011,Cal,Smith,RSY,36A Main St,United States,New York,New York,10001,145236598,design responsiveness,The design is user-friendly but it's not responsive for iPad.,Jeans,You have been successfully subscribed!
 Bob8c@gmail.com,webdir123RR,Bob,,,,,,,,,,,,,,
 adob@gmail.com,asd123RR,,,,,,,,,,,,,,,
