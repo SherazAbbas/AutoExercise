@@ -3,7 +3,7 @@ export default class productsPage{
 
     pageTitle = '.features_items .title';
     productList = '.features_items .col-sm-4';
-    view_Product = '.features_items > .col-sm-4:nth-child(3) .product-image-wrapper .choose'; //.features_items > .col-sm-4:nth-child(3) .product-image-wrapper .choose
+    view_Product = '.features_items > .col-sm-4:nth-child(3) .product-image-wrapper .choose'; 
     searchField = '#search_product';
     searchBtn = '#submit_search';
     searchResults = '.productinfo p';  

@@ -4,6 +4,8 @@ export default class productDetailPage{
     product_category = '.product-information p'
     product_detail = '.product-information p b'
     product_price = '.product-information span span'
+    addToCartBtn = '.product-information .btn'
+    
 
     verifyProductDetailPage(){
         cy.url()
@@ -22,5 +24,12 @@ export default class productDetailPage{
         .and('be.visible')
         cy.get(this.product_price)
         .should('be.visible')
+    }
+
+    clickAddToCartBtn(){
+        cy.get(this.addToCartBtn)
+        .should('be.visible')
+        .and('contain', 'Add to cart')
+        .click()
     }
 }
