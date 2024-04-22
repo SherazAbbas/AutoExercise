@@ -65,6 +65,7 @@ export default class productsPage{
     }
     clickFirstProduct(){
         cy.get(this.firstProduct)
+        .contains('Add to cart')
         .should('be.visible')
         .click()
         cy.get(this.firstPrdName)

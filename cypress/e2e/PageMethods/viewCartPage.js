@@ -23,7 +23,7 @@ export default class viewCart{
         cy.get(this.view_Product)
         .should('be.visible')
         .click()
-        cy.get(this.quantity).clear().type('2')
+        cy.get(this.quantity).clear().type('{upArrow}'.repeat(7))
         cy.get(this.quantity).invoke('val').then(qty => {
             cy.log(qty)
             cy.get('.product-information .btn').click()
@@ -33,7 +33,7 @@ export default class viewCart{
     }
     clickCheckoutBtn(){
         cy.get(this.checkoutBtn)
-        .contains('checkout')
+        .contains('Proceed To Checkout')
         .click()
     }
     clickRegisterLoginBtn(){
@@ -64,7 +64,7 @@ export default class viewCart{
         .should('be.visible')
         .and('contain', 'Congratulations! Your order has been confirmed!')
         cy.get(this.buttons)
-        .contains('continue')
+        .contains('Continue')
         .click
     }
 

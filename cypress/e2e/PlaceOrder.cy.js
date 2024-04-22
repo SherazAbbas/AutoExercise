@@ -5,7 +5,7 @@ import viewCart from "./PageMethods/viewCartPage";
 import authMethods from "./PageMethods/authenticationMethods";
 
 
-const csv = require('csv-parser');
+const csv = require('neat-csv')
 const home = new homeMethods();
 const products = new productsPage();
 const cart = new viewCart();

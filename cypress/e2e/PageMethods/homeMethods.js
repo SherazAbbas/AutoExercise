@@ -5,6 +5,10 @@ export default class homeMethods{
     subscription_email_field = '#susbscribe_email';
     arrowIcon = '#subscribe';
     success_message = '.alert-success';
+    sidebar_titles = '.left-sidebar h2'
+    categories_title = '.panel-title' //.panel:nth-child(1)
+    womenSubCategor_title = '#Women > .panel-body > ul > li'
+    menSubCategor_title = '#Men > .panel-body > ul > li' 
 
 
 
@@ -78,6 +82,30 @@ export default class homeMethods{
         cy.get(this.navbar)
         .should('be.visible')
         .contains('Cart')
+        .click()
+    }
+    verifyCategoryText(){
+        cy.get(this.sidebar_titles)
+        .first()
+        .should('contain','Category')
+    }
+    clickCategory(category){
+        cy.get(this.categories_title)
+        .contains(category)
+        .click()
+    }
+    clickWomenSubCategory(subcategory){
+        cy.get(this.womenSubCategor_title)
+        .contains(subcategory)
+        .click()
+    }
+    verifyCategoryPage(){
+        cy.url()
+        .should('include', '/category_products')
+    }
+    clickMenSubCategory(subcategory){
+        cy.get(this.menSubCategor_title)
+        .contains(subcategory)
         .click()
     }
 
