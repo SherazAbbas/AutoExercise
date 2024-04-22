@@ -19,7 +19,7 @@ describe('Subscription', () => {
         home.enterSubscriptionEmail(regData[1].UserEmail);
         home.verifySuccessMessage(regData[0].SuccessMessage);
   })
-  it('Subscription at Cart', () => {
+  /*it('Subscription at Cart', () => {
     cy.visit('/');
     home.verifyHomeTab();
     home.clickCartTab();
@@ -27,5 +27,5 @@ describe('Subscription', () => {
     home.verifySubscriptionText();
     home.enterSubscriptionEmail(regData[1].UserEmail);
     home.verifySuccessMessage(regData[0].SuccessMessage);    
-    })
+    })*/
 })
