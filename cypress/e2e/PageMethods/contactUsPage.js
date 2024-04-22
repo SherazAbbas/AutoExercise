@@ -38,7 +38,7 @@ export default class ContactUs{
     }
     chooseFile(){
         cy.get(this.uploadFile)
-        .selectFile('cypress/downloads/pyment.png') //D:\AutoExercise\cypress\downloads\pyment.png
+        .selectFile('../../downloads/pyment.png') //D:\AutoExercise\cypress\downloads\pyment.png
     }
     clickSubmitButton(){
         cy.get(this.submitButton)
